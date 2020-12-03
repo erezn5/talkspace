@@ -1,6 +1,5 @@
 package org.talkspace.model.pages;
 
-import org.awaitility.Duration;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.talkspace.model.BasePage;
@@ -26,10 +25,6 @@ public class WebCalculatorPage extends BasePage {
         arithmeticOperations = new ArithmeticOperations(driver);
         numberButtons = new NumberButtons(driver);
         historyDropDownHandler = new HistoryDropDownHandler(driver);
-    }
-
-    public void clickLoginButton() {
-        clickButton(loginbtnElm);
     }
 
     private void quringStringList(List<String>buttonList){
@@ -65,10 +60,6 @@ public class WebCalculatorPage extends BasePage {
         arithmeticOperations.clickSinBth();
         arithmeticOperations.clickResBth();
         sleep();
-    }
-
-    public void clearCalculationsHistory() {
-        historyDropDownHandler.clearCalculationsHistory();
     }
 
     public List<String> getDropDownHistoryItems() {
