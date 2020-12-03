@@ -34,45 +34,14 @@ public class EnvConf {
         return properties.getString(key);
     }
 
-    public static void setProperty(String key, String value){
-        properties.addProperty(key, value);
-    }
-
-    public static String getEnvProperty(String key , String defaultValue){
-        String value = System.getenv(key);
-        return (value == null) ? defaultValue : value;
-    }
-
-    public static int getAsInteger(String key){
-        return Integer.parseInt(getProperty(key));
-    }
-
     public static boolean getAsBoolean(String key){
         return Boolean.parseBoolean(getProperty(key));
-    }
-
-    public static void setChromeWebDriverPath(String driverPath){
-        System.setProperty("webdriver.chrome.driver" , driverPath);
-        properties.setProperty("webdriver.chrome.driver" , driverPath);
-    }
-
-    public static String getChromeWebDriverPath(){
-        return properties.getString("webdriver.chrome.driver");
     }
 
     private static String getEnvPropFilePath(){
         String envPath = System.getProperty("env.conf");
         envPath = (envPath == null) ? "env/env.properties" : envPath;
         return envPath;
-//        return (envPath == null) ? "C:\\Git\\seleniumProject\\src\\main\\resources\\env\\env.properties" : envPath;
     }
-
-    public static String getSetupFilePath(){
-        return properties.getString("env.setup");
-    }
-
-
-
-
 
 }
