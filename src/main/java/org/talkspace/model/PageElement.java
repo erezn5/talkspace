@@ -3,7 +3,6 @@ package org.talkspace.model;
 import org.apache.log4j.Logger;
 import org.awaitility.Duration;
 import org.awaitility.core.Condition;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
